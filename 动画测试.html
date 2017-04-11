@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>动画测试</title>
+    <style type="text/css">
+        body{
+            min-height:3000px;
+        }
+        .button{
+            position: fixed;right:50px;top:300px;
+            width:48px;height: 48px;line-height:48px;
+            background: #ffeeaa;
+            border-radius: 3px;
+            color:#888;font-szie:12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+      <div class="button" id="button">顶部</div>
+      <script type="text/javascript">
+          window.onload=function(){
+              var timer=null;
+              var button=document.getElementById('button');
+              button.onclick=function(){
+                  timer=setInterval(function(){
+
+                      var osTop=document.documentElement.scrollTop|| document.body.scrollTop;
+                      var speed=Math.floor(-osTop/10);
+                      console.log(document.body.scrollTop+'  '+speed);
+                      document.documentElement.scrollTop=document.body.scrollTop=osTop+speed;
+                      if(osTop==0){
+                          clearInterval(timer);
+                      }
+                  },100);
+
+
+              }
+          }
+      </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>css3</title>
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        *{
+            padding:0;margin: 0;list-style: none;
+        }
+        @font-face {
+            font-family: 'icomoon';
+            src:url(icomoon-1/fonts/icomoon.eot) format('embedded-opentype'),url(icomoon-1/fonts/icomoon.svg) format('svg'),
+            url(icomoon-1/fonts/icomoon.ttf) format('truetype'),url(icomoon-1/fonts/icomoon.woff) format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .content{
+            position: fixed;
+            right:150px;
+            top:200px;
+        }
+        .content .item{
+            position: relative;width:48px;height:48px;line-height: 48px;
+            margin-bottom: 5px;
+            background: #6D91CF;
+            border-radius: 4px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .content .item:hover a{
+            -webkit-transform: rotate3d(0,0,1,0deg);
+        }
+        .content .item  .icomoon{
+            font-family: 'icomoon';
+            font-weight: normal;
+            font-style: normal;
+            color:#fff;
+            font-size: 24px;
+        }
+        .content .item a{
+            position: absolute;width:48px;height:48px;line-height: 48px;
+            left:0;top:0;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 12px;
+            color:#fff;
+            background: #18448e;
+            text-decoration: none;
+            -webkit-transform-origin:-50% 50% ;
+            -webkit-transform: rotate3d(0,0,1,90deg);
+            -webkit-transition: all .3s;
+        }
+    </style>
+</head>
+<body>
+  <ul class="content">
+      <li class="item "><span class="icomoon">&#xe910;</span><a href="#">音乐</a></li>
+      <li class="item "><span class="icomoon">&#xe907;</span><a href="#">文章</a></li>
+      <li class="item"><span class="icomoon">&#xe900;</span><a href="#">主页</a></li>
+      <li class="item"><span class="icomoon">&#xe938;</span><a href="#">二维码</a></li>
+      <li class="item"><span class="icomoon">&#xe9d7;</span><a href="#">收藏</a></li>
+  </ul>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="dist/js/bootstrap.min.js"></script>
+</body>
+</html>
